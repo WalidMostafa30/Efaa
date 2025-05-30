@@ -1,0 +1,25 @@
+@import "tailwind.css";
+
+:root {
+  --color-main-clr: #0e3c3a;
+  --color-main-clr-2: #0c958a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-clr-2);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background: url(https://efaa.sa/Custom/imgs/Back004.jpg) no-repeat center
+    center fixed;
+}

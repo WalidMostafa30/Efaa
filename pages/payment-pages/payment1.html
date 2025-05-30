@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efaa</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind custom color -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main-clr: #0e3c3a;
+        --color-main-clr-2: #0c958a;
+      }
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white p-4">
+      <img
+        src="https://secureacceptance.cybersource.com/profiles/09EF12DA-2935-4E6E-9257-41270AF5BD37/banner-29452615b28afa234d629b47330da415da654c4ff30cde75f470f5344b5c0d5e.PNG"
+        alt=""
+        class="mx-auto"
+      />
+    </header>
+
+    <!-- معلومات الفاتورة -->
+    <main class="max-w-4xl mx-auto px-3 py-8 grid md:grid-cols-3 gap-8">
+      <div class="md:col-span-2">
+        <section class="border bg-white p-4 mb-8 rounded-md">
+          <h2 class="text-sm font-bold mb-4 pb-2 border-b text-green-700">
+            معلومات الفاتورة
+          </h2>
+
+          <form class="space-y-4">
+            <p class="text-green-700 text-sm text-end">* حقل مطلوب</p>
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4"
+                >* الاسم الأول</label
+              >
+              <input
+                type="text"
+                class="col-span-8 bg-gray-100 border rounded p-1"
+              />
+            </div>
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <label class="text-green-700 text-sm col-span-4"
+                >* الاسم الأخير</label
+              >
+              <input
+                type="text"
+                class="col-span-8 bg-gray-100 border rounded p-1"
+              />
+            </div>
+
+            <div class="grid grid-cols-12 gap-4 items-center mt-10">
+              <label class="text-green-700 text-sm col-span-4"
+                >* رقم الهاتف</label
+              >
+              <input
+                type="text"
+                class="col-span-8 bg-gray-100 border rounded p-1"
+              />
+            </div>
+
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <label class="text-green-700 text-sm col-span-4"
+                >* البريد الإلكتروني</label
+              >
+              <input
+                type="email"
+                class="col-span-8 bg-gray-100 border rounded p-1"
+              />
+            </div>
+          </form>
+        </section>
+
+        <!-- تفاصيل الدفع -->
+        <section class="border bg-white p-4 rounded-md">
+          <h2 class="text-sm font-bold mb-4 pb-2 border-b text-green-700">
+            🔒 تفاصيل الدفع
+          </h2>
+
+          <form class="space-y-4">
+            <!-- نوع البطاقة -->
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4"
+                >* نوع البطاقة</label
+              >
+              <div class="flex items-center flex-wrap gap-4 col-span-8">
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="cardType" />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"
+                    alt="Visa"
+                    class="w-12"
+                  />
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="cardType" />
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+                    alt="Mastercard"
+                    class="w-12"
+                  />
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="cardType" />
+                  <img
+                    src="https://saudinumber.com/wp-content/uploads/2024/06/%D8%B1%D9%82%D9%85-%D9%85%D8%AF%D9%89-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9.webp"
+                    alt="mada"
+                    class="w-12"
+                  />
+                </label>
+              </div>
+            </div>
+
+            <!-- رقم البطاقة -->
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4"
+                >* رقم البطاقة</label
+              >
+              <input
+                type="text"
+                class="bg-gray-100 border rounded p-1 col-span-6"
+              />
+            </div>
+
+            <!-- تاريخ الانتهاء -->
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4"
+                >* شهر انتهاء الصلاحية</label
+              >
+              <select
+                class="bg-gray-100 border rounded p-1 col-span-4 text-center"
+              >
+                <option>اختر</option>
+                <option>يناير</option>
+                <option>فبراير</option>
+                <!-- ... -->
+              </select>
+            </div>
+
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4"
+                >* سنة انتهاء الصلاحية</label
+              >
+              <select
+                class="bg-gray-100 border rounded p-1 col-span-4 text-center"
+              >
+                <option>اختر</option>
+                <option>2025</option>
+                <option>2026</option>
+                <!-- ... -->
+              </select>
+            </div>
+
+            <!-- CVN -->
+            <div class="grid grid-cols-12 gap-2">
+              <label class="text-green-700 text-sm col-span-4">CVN</label>
+              <input
+                type="text"
+                class="bg-gray-100 border rounded p-1 col-span-4"
+              />
+            </div>
+
+            <!-- أزرار -->
+            <div class="flex justify-between mt-4">
+              <button
+                type="reset"
+                class="bg-gray-100 text-gray-700 px-6 py-2 rounded hover:bg-gray-300 cursor-pointer"
+              >
+                إلغاء
+              </button>
+              <button
+                type="submit"
+                class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-900 cursor-pointer"
+              >
+                دفع
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <section class="border bg-white p-4 rounded-md h-fit sticky top-26">
+        <h2 class="text-green-700 font-bold mb-4 pb-2 border-b">
+          الطلب الخاص بك
+        </h2>
+
+        <div class="bg-green-100 p-2">
+          <p>المبلغ الإجمالي</p>
+          <p class="text-end">500.00 SAR</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

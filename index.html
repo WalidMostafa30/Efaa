@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efaa</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind custom color -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main-clr: #0e3c3a;
+        --color-main-clr-2: #0c958a;
+      }
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
+        }
+      }
+    </style>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Header -->
+      <header class="bg-main-clr-2/50">
+        <div class="myContainer flex items-center justify-between h-[70px]">
+          <img
+            loading="lazy"
+            class="w-32"
+            src="https://efaa.sa/Custom/imgs/EFAAW.svg"
+          />
+
+          <span class="lg:hidden menuBtn">
+            <i class="fa-solid fa-bars text-white text-2xl"></i>
+          </span>
+
+          <!-- desktop Nav -->
+          <nav class="hidden lg:flex items-center h-full text-white">
+            <a href="/" class="px-2 h-full content-center">الرئيسية</a>
+            <a
+              href="/pages/main-pages/about-efaa.html"
+              class="px-2 h-full content-center"
+              >عن ايفاء</a
+            >
+            <a
+              href="/pages/main-pages/beneficiaries.html"
+              class="px-2 h-full content-center"
+              >المستفيديون</a
+            >
+            <a
+              href="/pages/main-pages/regulations.html"
+              class="px-2 h-full content-center"
+              >قائمه المخالفات</a
+            >
+            <a
+              href="/pages/main-pages/partners.html"
+              class="px-2 h-full content-center"
+              >شركاؤنا</a
+            >
+            <a
+              href="/pages/main-pages/contact-us.html"
+              class="px-2 h-full content-center"
+              >اتصل بنا</a
+            >
+            <div>
+              <a href="#" class="p-2 bg-main-clr rounded-lg"
+                >استبيان نضج التجربه الرقميه</a
+              >
+            </div>
+            <a
+              href="#"
+              class="px-2 h-full content-center flex items-center gap-1"
+              >تسجيل الدخول <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <a
+              href="#"
+              class="px-2 h-full content-center flex items-center gap-1"
+              ><i class="fa-solid fa-globe"></i> EN</a
+            >
+          </nav>
+
+          <!-- Mobile Nav -->
+          <aside
+            class="mobileNav lg:hidden fixed inset-0 z-50 bg-black/50 translate-x-full duration-300"
+          >
+            <nav
+              class="flex flex-col items-start gap-1 h-full w-fit bg-main-clr-2 text-white"
+            >
+              <span class="p-3 menuBtn">
+                <i class="fa-solid fa-xmark text-white text-3xl"></i>
+              </span>
+
+              <a href="/" class="p-2 content-center">الرئيسية</a>
+              <a
+                href="/pages/main-pages/about-efaa.html"
+                class="p-2 content-center"
+                >عن ايفاء</a
+              >
+              <a
+                href="/pages/main-pages/beneficiaries.html"
+                class="p-2 content-center"
+                >المستفيديون</a
+              >
+              <a
+                href="/pages/main-pages/regulations.html"
+                class="p-2 content-center"
+                >قائمه المخالفات</a
+              >
+              <a
+                href="/pages/main-pages/partners.html"
+                class="p-2 content-center"
+                >شركاؤنا</a
+              >
+              <a
+                href="/pages/main-pages/contact-us.html"
+                class="p-2 content-center"
+                >اتصل بنا</a
+              >
+              <div class="p-2">
+                <a href="#" class="p-2 bg-main-clr rounded-lg"
+                  >استبيان نضج التجربه الرقميه</a
+                >
+              </div>
+              <a href="#" class="p-2 content-center flex items-center gap-1"
+                >تسجيل الدخول <i class="fa-solid fa-caret-down"></i
+              ></a>
+              <a href="#" class="p-2 content-center flex items-center gap-1"
+                ><i class="fa-solid fa-globe"></i> EN</a
+              >
+            </nav>
+          </aside>
+        </div>
+      </header>
+
+      <!-- section -->
+      <section
+        class="myContainer min-h-[calc(100vh-200px)] py-8 flex flex-col lg:flex-row gap-4"
+      >
+        <article
+          class="flex-2 bg-main-clr-2/50 p-4 text-white text-center lg:text-start content-center"
+        >
+          <h1 class="text-3xl lg:text-4xl font-bold mb-2">
+            المنصة الوطنية للمخالفات
+          </h1>
+          <h3 class="text-lg lg:text-xl font-bold">
+            وجهة واحدة لإدارة جميع المخالفات
+          </h3>
+          <p class="leading-7 hidden lg:block">
+            المنصة الوطنية للمخالفات (إيفاء) هي إحدى المنصات الوطنية التي ينفذها
+            مركز المعلومات الوطني التابع للهيئة السعودية للبيانات والذكاء
+            الإصطناعي وهي تهدف إلى تمكين المواطنين والمقيمين والزائرين وأصحاب
+            الأعمال من معرفة واستعراض كافة مخالفاتهم لدى الجهات الحكومية بكل يسر
+            وسهولة.
+          </p>
+
+          <div
+            class="flex flex-col lg:flex-row gap-2 w-full mt-4 lg:w-1/2 lg:ms-auto"
+          >
+            <button
+              class="flex justify-center items-center gap-2 w-full bg-main-clr p-4 cursor-pointer"
+            >
+              أفراد وأعمال <i class="fa-solid fa-user"></i>
+            </button>
+            <button
+              class="flex justify-center items-center gap-2 w-full bg-main-clr p-4 cursor-pointer"
+            >
+              شركاء <i class="fa-solid fa-hotel"></i>
+            </button>
+          </div>
+        </article>
+
+        <div
+          class="flex-1 flex-col gap-4 text-center bg-white/50 p-4 content-center"
+        >
+          <h3 class="text-2xl font-bold text-center mb-6">استعلام عن مخالفة</h3>
+
+          <div class="flex mb-6">
+            <label class="flex-1 cursor-pointer">
+              <input
+                type="radio"
+                name="type"
+                value="individual"
+                class="hidden peer"
+                checked
+                onchange="toggleForm(this.value)"
+              />
+              <div
+                class="w-full bg-main-clr-2 text-white py-2 flex items-center justify-center gap-2 peer-checked:bg-main-clr transition"
+              >
+                <i class="fa-solid fa-user"></i>
+                <span>أفراد</span>
+              </div>
+            </label>
+            <label class="flex-1 cursor-pointer">
+              <input
+                type="radio"
+                name="type"
+                value="company"
+                class="hidden peer"
+                onchange="toggleForm(this.value)"
+              />
+              <div
+                class="w-full bg-main-clr-2 text-white py-2 flex items-center justify-center gap-2 peer-checked:bg-main-clr transition"
+              >
+                <i class="fa-solid fa-hotel"></i>
+                <span>منشأة</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- أفراد -->
+          <div id="individualForm" class="form-section">
+            <input
+              type="text"
+              placeholder="رقم الهوية أو رقم الحدود"
+              class="w-full mb-4 p-3 bg-white focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+            />
+
+            <div class="flex mb-6">
+              <input
+                type="text"
+                placeholder="رقم المخالفة"
+                class="w-full p-3 bg-white focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+              />
+              <span
+                class="px-2 flex items-center justify-center bg-gray-400 text-white"
+                >أو</span
+              >
+              <input
+                type="date"
+                class="w-full p-3 bg-white text-sm focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+              />
+            </div>
+          </div>
+
+          <!-- منشأة -->
+          <div id="companyForm" class="form-section hidden">
+            <input
+              type="text"
+              placeholder="رقم المنشأة (يبدأ برقم 7)"
+              class="w-full mb-4 p-3 bg-white focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+            />
+
+            <div class="flex mb-6">
+              <input
+                type="text"
+                placeholder="رقم المخالفة"
+                class="w-full p-3 bg-white focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+              />
+              <span
+                class="px-2 flex items-center justify-center bg-gray-400 text-white"
+                >أو</span
+              >
+              <input
+                type="text"
+                placeholder="هويه أحد العمالة"
+                class="w-full p-3 bg-white focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+              />
+            </div>
+          </div>
+
+          <button
+            id="openModalBtn"
+            class="w-full py-3 bg-main-clr text-white font-semibold hover:bg-black cursor-pointer transition"
+          >
+            استعلام
+          </button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-main-clr-2/70 text-white">
+        <div class="myContainer grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+          <div>
+            <img
+              loading="lazy"
+              class="w-32 mx-auto"
+              src="https://efaa.sa/Custom/imgs/EFAAW.svg"
+            />
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <h2 class="font-bold">المنصة الوطنية للمخالفات</h2>
+
+            <ul class="flex justify-center gap-2 flex-wrap">
+              <li>سياسة الخصوصية</li>
+              <li>اتفاقية مستوى الخدمة للأفراد</li>
+              <li>شروط الإستخدام</li>
+              <li>الأسئلة الشائعة</li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Mada.svg"
+                alt=""
+              />
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Sdad.svg"
+                alt=""
+              />
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Visa.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="flex items-start justify-center gap-2">
+            <img
+              class="w-32"
+              src="https://efaa.sa/Custom/imgs/NICW.svg"
+              alt=""
+            />
+            <img
+              class="w-32"
+              src="https://efaa.sa/Custom/imgs/sdaia2.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </footer>
+
+      <!-- modal -->
+      <section
+        id="modal"
+        class="fixed inset-0 bg-black/80 hidden flex-col gap-4 items-center justify-center p-6"
+      >
+        <span
+          id="closeModalBtn"
+          class="bg-red-500 p-2 rounded-lg ms-auto cursor-pointer"
+          ><i class="fa-solid fa-xmark text-white text-3xl"></i
+        ></span>
+
+        <div
+          class="h-full w-full overflow-y-auto p-4 bg-white space-y-4 content-center"
+        >
+          <!-- الموقع -->
+          <a
+            href="#"
+            class="flex gap-2 items-center justify-center bg-main-clr-2 text-white px-6 py-3 rounded-lg max-w-sm"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            <span>الموقع</span>
+          </a>
+
+          <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 text-right">
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-address-card"></i>
+                هوية المخالف
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                2538258183
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-hashtag"></i>
+                رقم المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                10000014527101
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-archway"></i>
+                الجهة المصدرة للمخالفة
+              </p>
+              <p
+                class="font-semibold bg-gray-200 text-sm p-1 text-center flex items-center justify-center gap-1"
+              >
+                وزارة الداخلية - الأمن العام
+                <img
+                  src="https://efaa.sa/Custom/imgs/structure/27.svg"
+                  alt=""
+                  class="w-8"
+                />
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-id-card-clip"></i>
+                نوع المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                مخالفات الذوق العام
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-bars-progress"></i>
+                حالة المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                غير مسددة
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-window-maximize"></i>
+                طريقة التسجيل
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                تسجيل يدوي
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-clock"></i>
+                وقت المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                08:21:00
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-calendar-days"></i> تاريخ المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                2025/05/09
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                تاريخ استحقاق الدفع
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                2025/05/21
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-calendar-days"></i>
+                تاريخ السداد
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">-</p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-hashtag"></i>
+                رقم مرجع الجهة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                3260218
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-map-location"></i>
+                مدينة المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                قبة
+              </p>
+            </div>
+            <div>
+              <p class="text-gray-600 flex items-center gap-1">
+                <i class="fa-solid fa-coins"></i>
+                إجمالي مبلغ المخالفة
+              </p>
+              <p class="font-semibold bg-gray-200 text-sm p-1 text-center">
+                500 ريال
+              </p>
+            </div>
+          </div>
+
+          <!-- وصف المخالفة -->
+          <div
+            class="bg-yellow-100 text-orange-900 p-4 flex justify-between items-center gap-4 flex-wrap"
+          >
+            <div>
+              <p class="font-semibold">قيمة المخالفة</p>
+              <p>500 ريال</p>
+            </div>
+            <div>
+              <p class="font-semibold">عدد مرات حدوث المخالفة</p>
+              <p>1</p>
+            </div>
+            <div>
+              <p class="font-semibold">شرح المخالفة</p>
+              <p>البصق وإلقاء النفايات في غير الأماكن المخصصة لها</p>
+            </div>
+          </div>
+
+          <!-- أزرار -->
+          <div class="flex gap-2 justify-start items-center">
+            <a
+              href="/pages/payment-pages/payment1.html"
+              class="bg-main-clr-2 text-white px-4 py-2 rounded-md flex items-center gap-2"
+            >
+              <i class="fa-solid fa-credit-card"></i>
+              إدفع الآن
+            </a>
+
+            <button
+              class="bg-main-clr-2 text-white px-4 py-2 rounded-md flex items-center gap-2"
+            >
+              <i class="fa-solid fa-print"></i>
+              طباعة
+            </button>
+
+            <a href="#" class="bg-main-clr-2 text-white p-2 rounded-md">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="#" class="bg-main-clr-2 text-white p-2 rounded-md">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+  </body>
+</html>

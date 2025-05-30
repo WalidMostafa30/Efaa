@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efaa</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind custom color -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-main-clr: #0e3c3a;
+        --color-main-clr-2: #0c958a;
+      }
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
+        }
+      }
+    </style>
+    <!-- css link -->
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+
+  <body>
+    <main>
+      <!-- Header -->
+      <header class="bg-main-clr-2/50">
+        <div class="myContainer flex items-center justify-between h-[70px]">
+          <img
+            loading="lazy"
+            class="w-32"
+            src="https://efaa.sa/Custom/imgs/EFAAW.svg"
+          />
+
+          <span class="lg:hidden menuBtn">
+            <i class="fa-solid fa-bars text-white text-2xl"></i>
+          </span>
+
+          <!-- desktop Nav -->
+          <nav class="hidden lg:flex items-center h-full text-white">
+            <a href="/" class="px-2 h-full content-center">الرئيسية</a>
+            <a
+              href="/pages/main-pages/about-efaa.html"
+              class="px-2 h-full content-center"
+              >عن ايفاء</a
+            >
+            <a
+              href="/pages/main-pages/beneficiaries.html"
+              class="px-2 h-full content-center"
+              >المستفيديون</a
+            >
+            <a
+              href="/pages/main-pages/regulations.html"
+              class="px-2 h-full content-center"
+              >قائمه المخالفات</a
+            >
+            <a
+              href="/pages/main-pages/partners.html"
+              class="px-2 h-full content-center"
+              >شركاؤنا</a
+            >
+            <a
+              href="/pages/main-pages/contact-us.html"
+              class="px-2 h-full content-center"
+              >اتصل بنا</a
+            >
+            <div>
+              <a href="#" class="p-2 bg-main-clr rounded-lg"
+                >استبيان نضج التجربه الرقميه</a
+              >
+            </div>
+            <a
+              href="#"
+              class="px-2 h-full content-center flex items-center gap-1"
+              >تسجيل الدخول <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <a
+              href="#"
+              class="px-2 h-full content-center flex items-center gap-1"
+              ><i class="fa-solid fa-globe"></i> EN</a
+            >
+          </nav>
+
+          <!-- Mobile Nav -->
+          <aside
+            class="mobileNav lg:hidden fixed inset-0 z-50 bg-black/50 translate-x-full duration-300"
+          >
+            <nav
+              class="flex flex-col items-start gap-1 h-full w-fit bg-main-clr-2 text-white"
+            >
+              <span class="p-3 menuBtn">
+                <i class="fa-solid fa-xmark text-white text-3xl"></i>
+              </span>
+
+              <a href="/" class="p-2 content-center">الرئيسية</a>
+              <a
+                href="/pages/main-pages/about-efaa.html"
+                class="p-2 content-center"
+                >عن ايفاء</a
+              >
+              <a
+                href="/pages/main-pages/beneficiaries.html"
+                class="p-2 content-center"
+                >المستفيديون</a
+              >
+              <a
+                href="/pages/main-pages/regulations.html"
+                class="p-2 content-center"
+                >قائمه المخالفات</a
+              >
+              <a
+                href="/pages/main-pages/partners.html"
+                class="p-2 content-center"
+                >شركاؤنا</a
+              >
+              <a
+                href="/pages/main-pages/contact-us.html"
+                class="p-2 content-center"
+                >اتصل بنا</a
+              >
+              <div class="p-2">
+                <a href="#" class="p-2 bg-main-clr rounded-lg"
+                  >استبيان نضج التجربه الرقميه</a
+                >
+              </div>
+              <a href="#" class="p-2 content-center flex items-center gap-1"
+                >تسجيل الدخول <i class="fa-solid fa-caret-down"></i
+              ></a>
+              <a href="#" class="p-2 content-center flex items-center gap-1"
+                ><i class="fa-solid fa-globe"></i> EN</a
+              >
+            </nav>
+          </aside>
+        </div>
+      </header>
+
+      <hgroup class="text-center text-white px-3 py-8">
+        <h1 class="text-3xl lg:text-4xl font-bold mb-4">
+          المنصة الوطنية للمخالفات
+        </h1>
+        <p class="text-lg lg:text-xl">عن ايفاء</p>
+      </hgroup>
+
+      <!-- section -->
+      <section class="bg-gray-100 py-8">
+        <div class="myContainer grid lg:grid-cols-2 gap-6">
+          <div
+            class="text-center text-white bg-main-clr-2 p-8 shadow shadow-lg lg:col-span-2"
+          >
+            <h3 class="text-2xl mb-4 font-bold">المنصة الوطنية للمخالفات</h3>
+            <p>
+              إحدى المنصات الوطنية التي ينفذها مركز المعلومات الوطني التابع
+              للهيئة السعودية للبيانات والذكاء الإصطناعي
+            </p>
+          </div>
+
+          <div class="text-white bg-stone-500 p-8 shadow shadow-lg">
+            <h3 class="text-2xl mb-4 font-bold flex items-center gap-2">
+              <i class="fa-solid fa-bullseye"></i> الهدف من المنصة
+            </h3>
+            <p>
+              تهدف إلى تمكين المواطنين والمقيمين والزائرين وأصحاب الأعمال من
+              معرفة واستعراض كافة مخالفاتهم لدى الجهات الحكومية بكل يسر وسهولة.
+              إنّ ما نسعى إليه هو توحيد إجراءات المخالفات وتبسيطها وتحسينها من
+              خلال هذه المنصة التي ترتبط بها جميع الجهات ذات العلاقة لاجل إصدار
+              مخالفاتها.كما تهدف المنصة إلى تحقيق الانضباط السلوكي ورفع الوعي
+              لدى أفراد المجتمع، وذلك من خلال تعزيز التزام أفراد المجتمع
+              بالأنظمة والقوانين .
+            </p>
+          </div>
+
+          <div class="bg-white p-8 shadow shadow-lg">
+            <h3 class="text-2xl mb-4 font-bold flex items-center gap-2">
+              <img src="https://efaa.sa/Custom/imgs/2030.svg" class="w-16" />
+              رؤية المملكة العربية السعودية
+            </h3>
+            <p>
+              إنّ رؤية المملكة العربية السعودية التي تعمل على تنفيذها الهيئة
+              السعودية للبيانات والذكاء الاصطناعي في المنصة تكمن في تعزيز تميّز
+              الخدمات الحكومية واستمرارية الأعمال على مستوى الوزارات والهيئات
+              والمؤسسات المختلفة وذلك من خلال رفع كفاءة تطوير التطبيقات والخدمات
+              الحكومية الإلكترونية وتحسين مستوى الحوكمة المؤسسية وفعاليتها في
+              إدارة الإجراءات والخدمات المتعلقة بتحرير المخالفات، وتحقيق التفوّق
+              على المستويين الخدمي والمالي.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-main-clr-2/70 text-white">
+        <div class="myContainer grid md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
+          <div>
+            <img
+              loading="lazy"
+              class="w-32 mx-auto"
+              src="https://efaa.sa/Custom/imgs/EFAAW.svg"
+            />
+          </div>
+
+          <div class="flex flex-col items-center gap-4">
+            <h2 class="font-bold">المنصة الوطنية للمخالفات</h2>
+
+            <ul class="flex justify-center gap-2 flex-wrap">
+              <li>سياسة الخصوصية</li>
+              <li>اتفاقية مستوى الخدمة للأفراد</li>
+              <li>شروط الإستخدام</li>
+              <li>الأسئلة الشائعة</li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Mada.svg"
+                alt=""
+              />
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Sdad.svg"
+                alt=""
+              />
+              <img
+                class="w-26"
+                src="https://efaa.sa/Custom/imgs/Payment/Visa.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="flex items-start justify-center gap-2">
+            <img
+              class="w-32"
+              src="https://efaa.sa/Custom/imgs/NICW.svg"
+              alt=""
+            />
+            <img
+              class="w-32"
+              src="https://efaa.sa/Custom/imgs/sdaia2.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Script -->
+    <script src="../../main.js"></script>
+  </body>
+</html>
